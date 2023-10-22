@@ -68,7 +68,7 @@ namespace TestProject1
             double a = 100, b = 0, result = 0;
 
             // Act
-            result = calculator.Multiply(a, b);
+            result = calculator.Divide(a, b);
 
             // Assert
             Assert.Equal(double.NaN, result);
@@ -83,7 +83,7 @@ namespace TestProject1
             double a = 100, b = 10e-9, result = 0;
 
             // Act
-            result = calculator.Multiply(a, b);
+            result = calculator.Divide(a, b);
 
             // Assert
             Assert.Equal(double.NaN, result);
