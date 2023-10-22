@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Testing_lab_1.lab_1
+namespace Testing_lab_1.lab_1.Interfaces
 {
-    internal interface ICalculatorView
+    public interface ICalculatorView
     {
         /**
         * Отображает результат вычисления
@@ -16,17 +16,17 @@ namespace Testing_lab_1.lab_1
         /**
          * Показывает ошибку, например деление на 0, пустые аргументы и прочее
          */
-        void DisplayError(String message);
+        void DisplayError(string message);
 
         /**
          * Возвращает значение, введенное в поле первого аргументы
          */
-        String GetFirstArgumentAsString();
+        string GetFirstArgumentAsString();
 
         /**
          * Возвращает значение, введенное в поле второго аргументы
          */
-        String GetSecondArgumentAsString();
+        string GetSecondArgumentAsString();
 
     }
 }

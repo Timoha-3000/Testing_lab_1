@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Testing_lab_1.lab_1
+namespace Testing_lab_1.lab_1.Interfaces
 {
-    internal interface ICalculatorPresenter
+    public interface ICalculatorPresenter
     {
         /**
          * Вызывается формой в тот момент, когда пользователь нажал на кнопку '+'
