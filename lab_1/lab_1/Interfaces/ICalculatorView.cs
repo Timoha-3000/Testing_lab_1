@@ -16,7 +16,7 @@ namespace Testing_lab_1.lab_1.Interfaces
         /**
          * Показывает ошибку, например деление на 0, пустые аргументы и прочее
          */
-        void DisplayError(string message);
+        void DisplayError(SystemException message);
 
         /**
          * Возвращает значение, введенное в поле первого аргументы
