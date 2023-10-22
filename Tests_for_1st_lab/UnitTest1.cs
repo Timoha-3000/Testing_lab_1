@@ -1,3 +1,6 @@
+global using Xunit;
+using Xunit;
+
 namespace Tests_for_1st_lab
 {
     public class UnitTest1
