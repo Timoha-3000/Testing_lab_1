@@ -1,4 +1,5 @@
 using Testing_lab_1.lab_1.classes;
+using Xunit;
 
 namespace TestProject1
 {
@@ -71,7 +72,7 @@ namespace TestProject1
             result = calculator.Divide(a, b);
 
             // Assert
-            Assert.Equal(double.NaN, result);
+            Assert.True(double.IsNaN(result));
         }
 
 
@@ -86,7 +87,7 @@ namespace TestProject1
             result = calculator.Divide(a, b);
 
             // Assert
-            Assert.Equal(double.NaN, result);
+            Assert.True(double.IsNaN(result));
         }
     }
 }

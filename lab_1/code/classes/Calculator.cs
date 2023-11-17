@@ -32,7 +32,7 @@ namespace Testing_lab_1.lab_1.classes
 
         public double Divide(double a, double b)
         {
-            if (b == 0 || b < 10e-8) view.DisplayError(new ArithmeticException());
+            if (b == 0 || b < 10e-8) { view.DisplayError(new ArithmeticException()); return double.NaN; };
             return a / b;
         }
 
