@@ -16,11 +16,17 @@ namespace Testing_lab_1.lab_1.classes
         public double Result { get; set; }
         private Calculator Calculator { get; set; }
         private CalculatorView CalculatorView { get; set; }
+        public CalculatorPresenter Object { get; }
 
         public CalculatorPresenter()
         {
             Calculator = new Calculator();
             CalculatorView = new CalculatorView();
+        }
+
+        public CalculatorPresenter(CalculatorPresenter @object)
+        {
+            Object = @object;
         }
 
         /// <summary>
