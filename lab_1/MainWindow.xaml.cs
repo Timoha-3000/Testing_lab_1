@@ -28,7 +28,7 @@ namespace lab_1
             DataContext = new CalculatorPresenter();
         }
 
-        private void Multiplexer(object sender, RoutedEventArgs e)
+        public void Multiplexer(object sender, RoutedEventArgs e)
         {
             if (DataContext is CalculatorPresenter dataContext)
             {
