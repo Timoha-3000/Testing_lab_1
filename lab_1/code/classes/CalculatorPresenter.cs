@@ -24,11 +24,6 @@ namespace Testing_lab_1.lab_1.classes
             CalculatorView = new CalculatorView();
         }
 
-        public CalculatorPresenter(CalculatorPresenter @object)
-        {
-            Object = @object;
-        }
-
         /// <summary>
         /// Вызывается формой в тот момент, когда пользователь нажал на кнопку '+'
         /// </summary>

@@ -22,13 +22,12 @@ namespace lab_1
     public partial class MainWindow : Window
     {
         CalculatorPresenter DataContex;
-        List<Control> Controls = new List<Control>();
 
         public MainWindow()
         {
             InitializeComponent();
 
-            DataContex = new CalculatorPresenter();
+            DataContext = new CalculatorPresenter();
         }
 
         public MainWindow(CalculatorPresenter viewModel)
@@ -40,7 +39,7 @@ namespace lab_1
 
         public void Multiplexer(object sender, RoutedEventArgs e)
         {
-            if (DataContex is CalculatorPresenter dataContext)
+            if (DataContext is CalculatorPresenter dataContext)
             {
                 if (sender is Button)
                 {
@@ -60,12 +59,16 @@ namespace lab_1
             }
         }
 
-        public void AddAllElements()
+        public List<Button> AddAllElements()
         {
+            List<Button> Controls = new List<Button>();
+
             Controls.Add(Sum);
             Controls.Add(Subtract);
             Controls.Add(Multiply);
             Controls.Add(Divide);
+
+            return Controls;
         }
     }
 }

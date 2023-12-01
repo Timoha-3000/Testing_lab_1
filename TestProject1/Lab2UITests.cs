@@ -2,6 +2,7 @@
 using Moq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using Testing_lab_1.lab_1.classes;
 
 namespace TestProject1
@@ -122,7 +123,26 @@ namespace TestProject1
             var mainWindow = new MainWindow(dataProvider);
 
             // Assert
-            Assert.Equal(Visibility.Visible, mainWindow.Visibility);
+            Assert.Equal(Visibility.Collapsed, mainWindow.Visibility);
+        }
+
+        [UIFact]
+        public void ButtonClickSumTest()
+        {
+            // Arrange
+            var dataProvider = new CalculatorPresenter();
+            dataProvider.FirstArgument = 44;
+            dataProvider.SecondArgument = 2;
+            var mainWindow = new MainWindow(dataProvider);
+
+            // Act
+            List<Button> buttons = mainWindow.AddAllElements();
+            var but = buttons.Where(e => e.Name == "Sum").FirstOrDefault();
+
+            if(but != null) but.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));
+
+            // Assert
+            Assert.Equal(46, dataProvider.Result);
         }
     }
 }
